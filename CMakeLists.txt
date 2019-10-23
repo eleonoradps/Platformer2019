@@ -3,7 +3,7 @@ project(PLATFORMER)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
-
+file(COPY ${CMAKE_SOURCE_DIR}/data/ DESTINATION ${CMAKE_BINARY_DIR}/data/)
 file(GLOB_RECURSE PLATFORMER_SRC src/*.cpp include/*.h)
 
 include_directories(include/)
@@ -43,6 +43,7 @@ add_subdirectory(${BOX2D_DIR})
 include_directories(${BOX2D_DIR}/)
 LIST(APPEND PLATFORMER_LIBRARIES
 	Box2D)
+
 add_executable(PLATFORMER ${PLATFORMER_SRC})
 target_link_libraries(PLATFORMER ${PLATFORMER_LIBRARIES})
 
