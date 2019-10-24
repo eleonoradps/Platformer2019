@@ -25,18 +25,28 @@ void PlayerCharacter::Init(b2World& world)
 
 	b2PolygonShape shape;
 	shape.SetAsBox(pixel2meter(boxSize.x) / 2.0f, pixel2meter(boxSize.y) / 2.0f);
+
+	boxRectDebug_.setSize(boxSize);
+	boxRectDebug_.setOrigin(boxSize / 2.0f);
+	boxRectDebug_.setFillColor(sf::Color(0,255,0,120));
+	boxRectDebug_.setOutlineColor(sf::Color::Green);
+	boxRectDebug_.setOutlineThickness(2.0f);
+
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &shape;
+	fixtureDef.friction = 0.0f;
+	fixtureDef.userData = this;
 
 	playerBody_->CreateFixture(&fixtureDef);
 }
 
 void PlayerCharacter::Update(float dt)
 {
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	float jump = playerBody_->GetLinearVelocity().y;
+	bool jumpButton = sf::Keyboard::isKeyPressed(sf::Keyboard::Up);
+	if (jumpButton && !previousJumpButton_ && contactNmb_ > 0)
 	{
-		playerBody_->SetLinearVelocity(b2Vec2(playerBody_->GetLinearVelocity().x, 100.0f));
+		jump = jumpVelocity_;
 	}
 
 	float move = 0.0f;
@@ -49,13 +59,32 @@ void PlayerCharacter::Update(float dt)
 		move += 1.0f;
 	}
 	
-	playerBody_->SetLinearVelocity(b2Vec2(move * pixel2meter(playerSpeed_), playerBody_->GetLinearVelocity().y));
+	const float deltaVx = move * pixel2meter(playerSpeed_) - playerBody_->GetLinearVelocity().x;
+	const float fx = movementFactor_ * playerBody_->GetMass() * deltaVx / dt;
+
+	const float deltaVy = jump - playerBody_->GetLinearVelocity().y;
+	const float fy = playerBody_->GetMass() * deltaVy / dt;
+	playerBody_->ApplyForce(b2Vec2(fx, fy), playerBody_->GetWorldCenter(), true);
 	
+	previousJumpButton_ = jumpButton;
 }
 
 void PlayerCharacter::Draw(sf::RenderWindow& window)
 {
+
+	boxRectDebug_.setPosition(meter2pixel(playerBody_->GetPosition()));
 	playerPosition_ = meter2pixel(playerBody_->GetPosition());
 	playerSprite_.setPosition(playerPosition_);
 	window.draw(playerSprite_);
+	window.draw(boxRectDebug_);
+}
+
+void PlayerCharacter::OnContactBegin()
+{
+	contactNmb_++;
+}
+
+void PlayerCharacter::OnContactEnd()
+{
+	contactNmb_--;
 }

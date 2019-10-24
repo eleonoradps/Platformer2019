@@ -8,26 +8,33 @@ const float framerate = 60.f;
 //For pixel to meter conversion
 const float pixelPerMeter = 100.0f;
 
+using meter = float;
+using pixel = float;
+
 //For b2World step
 const int velocityIterations = 8;
 const int positionIterations = 8;
 
 
-float pixel2meter(float pixel);
+meter pixel2meter(pixel pixel);
 b2Vec2 pixel2meter(sf::Vector2f pixels);
-float meter2pixel(float meter);
+pixel meter2pixel(pixel meter);
 sf::Vector2f meter2pixel(b2Vec2 meters);
 
-enum class ContactDataType
+
+enum class GameObjectType
 {
-	PLATFORM_CHARACTER,
+	PLAYER_CHARACTER,
 	PLATFORM
 };
 
-struct ContactData
+class GameObject
 {
-	void* data;
-	ContactDataType contactDataType;
+public:
+	GameObjectType GetGameObjectType() const { return gameObjectType_; };
+protected:
+	GameObjectType gameObjectType_;
+
 };
 
 #endif

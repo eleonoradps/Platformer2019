@@ -1,7 +1,7 @@
 #include "globals.h"
 
 
-float pixel2meter(float pixel)
+meter pixel2meter(pixel pixel)
 {
 	return pixel / pixelPerMeter;
 }
@@ -9,7 +9,7 @@ b2Vec2 pixel2meter(sf::Vector2f pixels)
 {
 	return b2Vec2(pixel2meter(pixels.x), pixel2meter(pixels.y));
 }
-float meter2pixel(float meter)
+pixel meter2pixel(meter meter)
 {
 	return meter * pixelPerMeter;
 }
