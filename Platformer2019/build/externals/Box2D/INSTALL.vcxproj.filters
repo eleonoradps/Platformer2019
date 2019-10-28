@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\build\CMakeFiles\1c80f41c4f9fe4e42b8f573ade958e2d\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6D6BCE08-CE40-3DD8-93DB-BB50AA61741C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

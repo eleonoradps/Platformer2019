@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.15/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.15/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFile.c.in
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckTypeSize.c.in
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/lorna/SAE Institute/PLATFORMER/Platformer2019/build/CMakeFiles/CheckTypeSize/SIZEOF_VOID_PTR.c
+C:/Users/lorna/SAE Institute/PLATFORMER/Platformer2019/externals/SFML/CMakeLists.txt
+C:/Users/lorna/SAE Institute/PLATFORMER/Platformer2019/externals/SFML/cmake/Config.cmake
+C:/Users/lorna/SAE Institute/PLATFORMER/Platformer2019/externals/SFML/cmake/SFMLConfig.cmake.in
+C:/Users/lorna/SAE Institute/PLATFORMER/Platformer2019/externals/SFML/cmake/SFMLConfigDependencies.cmake.in

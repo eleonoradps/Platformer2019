@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\src\engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\src\globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\src\plaform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\include\engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\include\globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\include\platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\include\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lorna\SAE Institute\PLATFORMER\Platformer2019\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{09AA0EC6-A7F4-381D-9612-7DACF949EECA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5AEE0EBE-E00E-318B-B8F0-A368B5D9C062}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
